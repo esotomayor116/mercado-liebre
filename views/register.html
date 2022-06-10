@@ -67,14 +67,14 @@
             </div>
         </header>
         <main>
-            <form class="formRegistro" action="/registro" method="POST">   
+            <form class="formRegistro" action="/" method="GET">   
                 <!-- Aquí van los campos -->
                     <div class="topFormRegistro">
-                        <input type="text" name="nombreApellido" placeholder="Nombre y apellido"><br>
-                        <input class="nombreUsuario" type="text" name="usuario" placeholder="Nombre de usuari@">
+                        <input type="text" name="nombreApellido" placeholder="Nombre y apellido" required oninvalid="this.setCustomValidity('Por favor ingresa tu nombre y apellido para continuar con el registro')"><br>
+                        <input class="nombreUsuario" type="text" name="usuario" placeholder="Nombre de usuari@" required oninvalid="this.setCustomValidity('Por favor ingresa un nombre de usuario válido')">
                         <span class="feedback">El nombre de usuario debe poseer al menos 8 caracteres alfanumėricos</span><br>
                         <label for="fechaNacimiento">Fecha de nacimiento</label>
-                        <input type="date" name="fechaNacimiento" id="fechaNacimiento"><br>
+                        <input type="date" name="fechaNacimiento" id="fechaNacimiento" required oninvalid="this.setCustomValidity('Ingresa tu fecha de nacimiento. Si eres menor de 18 años no puedes generarte una cuenta')"><br>
                         <input type="text" name="domicilio" placeholder="Domicilio"><br>
                     </div>
                     <div class="perfilUsuario">
@@ -117,9 +117,9 @@
                         <input type="file" name="fotoUsuario">
                     </div>
                     <div class="contraseñas">
-                        <input type="password" name="contraseña" placeholder="Contraseña">
+                        <input type="password" name="contraseña" placeholder="Contraseña" required oninvalid="this.setCustomValidity('Ingresa una contraseña válida')">
                         <i class="fa-solid fa-eye"></i><br>
-                        <input type="password" name="confirmarContraseña" placeholder="Confirmar Contraseña"> 
+                        <input type="password" name="confirmarContraseña" placeholder="Confirmar Contraseña" required oninvalid="this.setCustomValidity('Ingresa una contraseña válida que coincida con la anteriormente ingresada')"> 
                         <i class="fa-solid fa-eye"></i><br>
                     </div>
 

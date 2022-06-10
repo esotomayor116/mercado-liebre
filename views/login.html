@@ -70,10 +70,10 @@
                 </div>
         </header>
         <main>
-            <form action="/registro" method="POST">   
+            <form action="/" method="GET">   
                 <!-- Aquí van los campos -->
-                <div class="login"><input type="text" name="usuario" placeholder="Nombre de usuari@"></div>
-                <div class="login"><input type="password" name="contraseña" placeholder="Contraseña"></div>
+                <div class="login"><input type="text" name="usuario" placeholder="Nombre de usuari@" required oninvalid="this.setCustomValidity('Tu usuario no coincide con un registro valido')"></div>
+                <div class="login"><input type="password" name="contraseña" placeholder="Contraseña" required oninvalid="this.setCustomValidity('Tu contraseña es inválida')"></div>
                 <div class="botonLogin">
                     <button type="submit">Enviar</button>
                 </div>
